@@ -1,3 +1,5 @@
+@import url(fontes.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +12,14 @@ html {
 }
 
 :root {
-    --amarelinho: #feffdd;
+    --amarelinho: #faff64;
     --azul: #255ec0;
     --azulescuro: #0E1957;
     --preto: #1a0600;
     --branco: white;
-    --vermelho: #D90D0D;
+    --darkmodebranco: white;
+    --darkmodepreto: black;
+    --azulclaro: rgb(118, 177, 255);
 }
 
 .navegacao{
@@ -23,9 +27,20 @@ html {
     top: 0;
     width: 100%;
     padding: 1.0rem;
-    background: rgba(37,94,192,0.25);
+    background: rgba(0, 59, 162, 0.656);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.15);
+    z-index: 100;
+}
+
+body.dark .navegacao {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.0rem;
+    background: rgba(0, 0, 1, 0.604);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.358);
     z-index: 100;
 }
 
@@ -44,6 +59,14 @@ html {
     padding: 0.4rem 0;
 }
 
+.menu-link.dark{
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 500;
+    position: relative;
+    padding: 0.4rem 0;
+}
+
 .menu-link::after{
     content:'';
     height: 2px;
@@ -51,7 +74,7 @@ html {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var(--branco),yellow);
+    background: linear-gradient(90deg, var(--branco), var(--amarelinho));
     transition: width 0.3s ease;
 }
 
@@ -76,7 +99,7 @@ html {
 }
 
 .pfp:hover{
-    box-shadow: 0 0 25px rgba(240, 255, 100, 0.4);
+    box-shadow: 0 0 25px rgba(235, 255, 58, 0.844);
 }
 
 .projetos-card:hover{
@@ -148,9 +171,26 @@ body{
     color: var(--azul);
 }
 
+body.dark{
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top,
+            var(--azulescuro),
+            var(--darkmodepreto)
+        );
+    color: var(--azulclaro);
+}
+
 .nome{
-    font-family: "Bitcount Single", sans-serif;
+    font-family: 'Makcasa';
     font-weight: 400;
+    font-size: 40px;
+    color: var(--azul)
+}
+
+body.dark .nome {
+    color: var(--amarelinho);
 }
 
 .sobre{
@@ -159,17 +199,39 @@ body{
     padding-bottom: 150px;
 }
 
+.sobre-titulo.dark {
+    color: var(--azulclaro);
+}
+
+.titulo-sobre{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-family: 'Makcasa';
+    font-size: 30px;
+}
+
 .sobre-texto{
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
 }
 
+body.dark .sobre-texto {
+    color: var(--darkmodebranco);
+}
+
 .projetos-titulo{
+    font-family: 'Makcasa';
     text-align: center;
     margin-top: 5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     scroll-margin-top: 100px;
+    font-size: 30px;
+}
+
+.simbolosdivider{
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .projetos{
@@ -177,4 +239,25 @@ body{
     scroll-margin-top: 100px;
 }
 
+body.dark .projetos-card {
+    background: var(--darkmodepreto);
+    color: var(--darkmodebranco);
+}
 
+.botao-tema {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    color: var(--branco);
+}
+
+.botao-tema.dark {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    color: var(--darkmodebranco);
+}
