@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --amarelinho: #feffdd;
+    --azul: #255ec0;
+    --azulescuro: #0E1957;
+    --preto: #1a0600;
+    --branco: white;
+    --vermelho: #D90D0D;
+}
+
+.navegacao{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.0rem;
+    background: rgba(37,94,192,0.25);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    z-index: 100;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 500;
+    position: relative;
+    padding: 0.4rem 0;
+}
+
+.menu-link::after{
+    content:'';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--branco),yellow);
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+.introducao{
+    min-height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.pfp{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+.pfp:hover{
+    box-shadow: 0 0 25px rgba(240, 255, 100, 0.4);
+}
+
+.projetos-card:hover{
+    transform:
+        translateY(-10px)
+        scale(1.02);
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.15);
+}
+
+.introducao{
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.projetos-caixa{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.projetos-imagem{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.info-projetos,
+.paragrafo-projetos{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.info-projetos{
+    margin-top: 1rem;
+}
+
+.paragrafo-projetos{
+    margin-bottom: 1rem;}
+
+.projetos-card{
+    width: 350px;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: .4s;
+}
+
+body{
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top,
+            #f7faff,
+            #ffffff
+        );
+    color: var(--azul);
+}
+
+.nome{
+    font-family: "Bitcount Single", sans-serif;
+    font-weight: 400;
+}
+
+.sobre{
+    text-align: center;
+    scroll-margin-top: 100px;
+    padding-bottom: 150px;
+}
+
+.sobre-texto{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projetos-titulo{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    scroll-margin-top: 100px;
+}
+
+.projetos{
+    padding-top: 4rem;
+    scroll-margin-top: 100px;
+}
+
+
