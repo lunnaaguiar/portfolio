@@ -299,7 +299,7 @@ body.dark .projetos-card {
 .nuvem{
     position: fixed;
     font-size: 4rem;
-    opacity: 0.6;
+    opacity: 0.8;
     pointer-events: none;
     z-index: -1;
     color: white;
