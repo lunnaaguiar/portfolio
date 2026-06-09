@@ -165,7 +165,7 @@ body{
     background:
         radial-gradient(
             circle at top,
-            #f7faff,
+            #d2e3ff,
             #ffffff
         );
     color: var(--azul);
@@ -260,4 +260,86 @@ body.dark .projetos-card {
     font-size: 1.2rem;
     padding: 0.4rem;
     color: var(--darkmodebranco);
+}
+
+/* nuvens e estrelas - alternar :3 */
+
+.nuvem1, .estrela1 {top:10%; left:15%;}
+.nuvem2, .estrela2 {top:25%; right:10%;}
+.nuvem3, .estrela3 {top:70%; left:8%;}
+.nuvem4, .estrela4 {top:85%; right:20%;}
+.nuvem5, .estrela5 {top:18%; left:75%;}
+.nuvem6, .estrela6 {top:55%; right:35%;}
+.nuvem7, .estrela7 {top:92%; left:60%;}
+
+/* animação de piscar das estrelinhas*/
+
+@keyframes piscar{
+    from{
+        opacity: .3;
+        transform: scale(1);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.estrela{
+    position: fixed;
+    color: var(--amarelinho);
+    font-size: 1.5rem;
+    pointer-events: none;
+    z-index: -1;
+    animation: piscar 3s infinite alternate;
+}
+
+
+.nuvem{
+    position: fixed;
+    font-size: 4rem;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: -1;
+    color: white;
+    animation: moverNuvem 8s ease-in-out infinite;
+}
+
+@keyframes moverNuvem{
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(15px);}
+    100%{transform: translateX(0px);}
+}
+
+/* Duração das animações etc */
+
+.estrela1{animation-duration: 2s;}
+.estrela2{animation-duration: 3s;}
+.estrela3{animation-duration: 2.5s;}
+.estrela4{animation-duration: 4s;}
+.estrela5{animation-duration: 3.5s;}
+.estrela6{animation-duration: 2.2s;}
+.estrela7{animation-duration: 4.5s;}
+
+.nuvem1{animation: moverNuvem 8s ease-in-out infinite;}
+.nuvem2{animation: moverNuvem 10s ease-in-out infinite;}
+.nuvem3{animation: moverNuvem 7s ease-in-out infinite;}
+.nuvem4{animation: moverNuvem 12s ease-in-out infinite;}
+
+/* modo claro - escuro; mudança dos símbolos*/
+.nuvem{
+    display: block;
+}
+
+.estrela{
+    display: none;
+}
+
+body.dark .nuvem{
+    display: none;
+}
+
+body.dark .estrela{
+    display: block;
 }
