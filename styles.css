@@ -526,14 +526,3 @@ body.dark .rodape{
     font-family: 'Pixel', sans-serif;
     font-size: 0.6rem;
 }
-
-.musica{
-    max-width: 500px;
-    margin: 4rem auto;
-    text-align: center;
-}
-
-.musica iframe{
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    border-radius: 12px;
-}
