@@ -4,3 +4,10 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face{
+    font-family: 'Pixel';
+    src: url(fonts/the-libra-heart-font.ttf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}

@@ -447,3 +447,82 @@ body.dark .instagram-card:hover{
 body.dark .instagram-icon{
     filter: invert(1);
 }
+
+/* bolhinhas */
+
+.bolha{
+    position: fixed;
+    z-index: -1;
+    opacity: 0.5;
+    color: var(--azul);
+    font-size: 2rem;
+    pointer-events: none;
+
+    animation: subirBolha linear infinite;
+}
+
+@keyframes subirBolha{
+    0%{
+        transform: translateY(100vh) translateX(0);
+    }
+    50%{
+        transform: translateY(0) translateX(15px);
+    }
+    100%{
+        transform: translateY(-120vh) translateX(-10px);
+    }
+}
+
+.bolha1{
+    left: 10%;
+    animation-duration: 14s;
+}
+
+.bolha2{
+    left: 30%;
+    animation-duration: 18s;
+    font-size: 1.5rem;
+}
+
+.bolha3{
+    left: 55%;
+    animation-duration: 16s;
+}
+
+.bolha4{
+    left: 75%;
+    animation-duration: 20s;
+    font-size: 2.5rem;
+}
+
+.bolha5{
+    left: 90%;
+    animation-duration: 15s;
+}
+
+body.dark .bolha{
+    color: white
+}
+
+body.dark .titulo-contato{
+    color: white;
+}
+
+.rodape{
+    margin-top: 5rem;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(37,94,192,0.15);
+    backdrop-filter: blur(10px);
+    color: var(--azul);
+}
+
+body.dark .rodape{
+    background: rgba(0,0,0,0.25);
+    color: white;
+}
+
+.assinatura{
+    font-family: 'Pixel', sans-serif;
+    font-size: 0.6rem;
+}
