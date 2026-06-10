@@ -343,3 +343,107 @@ body.dark .nuvem{
 body.dark .estrela{
     display: block;
 }
+
+/* Github botão projeto */
+
+.github-card{
+    width: 500px;
+    margin: 2rem auto 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    background: white;
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: var(--azul);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: .4s;
+}
+
+.github-card:hover{
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+}
+
+.github-icon{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+body.dark .github-card{
+    background: var(--darkmodepreto);
+    color: white;
+}
+
+body.dark .github-card:hover{
+    background: var(--azulescuro);
+}
+
+body.dark .github-icon{
+    filter: invert(1);
+}
+
+/* card do instagram de desenhos */
+
+.instagram-card{
+    width: 500px;
+    margin: 1.5rem auto 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    background: white;
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: var(--azul);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: .4s;
+}
+
+.instagram-card:hover{
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+}
+
+.instagram-icon{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+body.dark .instagram-card{
+    background: var(--darkmodepreto);
+    color: white;
+}
+
+body.dark .instagram-card:hover{
+    background: var(--azulescuro);
+}
+
+body.dark .instagram-icon{
+    filter: invert(1);
+}
