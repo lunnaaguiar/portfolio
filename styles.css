@@ -15,7 +15,7 @@ html {
     --amarelinho: #faff64;
     --azul: #255ec0;
     --azulescuro: #0E1957;
-    --preto: #1a0600;
+    --preto: #000000;
     --branco: white;
     --darkmodebranco: white;
     --darkmodepreto: black;
@@ -165,8 +165,8 @@ body{
     background:
         radial-gradient(
             circle at top,
-            #d2e3ff,
-            #ffffff
+            var(--azulclaro),
+            var(--branco)
         );
     color: var(--azul);
 }
@@ -457,7 +457,6 @@ body.dark .instagram-icon{
     color: var(--azul);
     font-size: 2rem;
     pointer-events: none;
-
     animation: subirBolha linear infinite;
 }
 
@@ -500,6 +499,12 @@ body.dark .instagram-icon{
     animation-duration: 15s;
 }
 
+/* bugou */
+.bolha6{
+    animation: subirBolha 18s linear infinite;
+    left: 10%;
+}
+/* - - - */
 body.dark .bolha{
     color: white
 }
@@ -542,5 +547,91 @@ a:hover {
 }
 
 .dark a:hover {
+    color: var(--amarelinho);
+}
+
+/* certificações */
+
+.certificacoes-card{
+    width: 500px;
+    margin: 1.5rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--azul);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: .4s;
+}
+
+.certificacoes-card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.certificacoes-icon{
+    width: 40px;
+    height: 40px;
+}
+
+body.dark .certificacoes-card{
+    background: var(--darkmodepreto);
+    color: white;
+}
+
+body.dark .certificacoes-card:hover{
+    background-color: var(--azulescuro);
+}
+
+
+.certificados-caixa{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 7rem auto 3rem auto;
+}
+
+.certificado-card{
+    background: white;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--azul);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: .4s;
+}
+
+.certificado-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+body.dark .certificacoes-icon{
+    filter: invert(1);
+}
+
+.certificado-imagem{
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+body.dark .certificado-card{
+    background: var(--preto);
+    color: white;
+}
+
+body.dark .certificado-imagem{
+    filter: invert(1);
+}
+
+/* n  sei pq não funcionou já que era pra ser um link */
+body.dark .certificacoes-card:hover{
     color: var(--amarelinho);
 }
